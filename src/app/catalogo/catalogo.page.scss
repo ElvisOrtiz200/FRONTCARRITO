@@ -1,0 +1,40 @@
+/* Estilos para el título */
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1d4ed8; /* Azul oscuro */
+    margin-bottom: 4px;
+}
+
+/* Estilos para el precio */
+.product-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #16a34a; /* Verde para el precio */
+    margin-top: 5px;
+    display: block;
+}
+
+/* Estilos para el texto subtext */
+.subtext {
+    font-size: 14px;
+    color: #6b7280; /* Gris para el texto */
+    margin-top: 3px;
+}
+
+/* Estilos para el botón */
+.add-to-cart-btn {
+    --background: #1d4ed8; /* Fondo azul */
+    --color: #ffffff; /* Texto blanco */
+    border-radius: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* Estilos para el ion-avatar */
+ion-avatar img {
+    border-radius: 50%; /* Hacer la imagen circular */
+    border: 2px solid #e0e7ff; /* Borde ligero */
+    width: 50px; /* Tamaño ajustable */
+    height: 50px;
+}

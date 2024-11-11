@@ -1,0 +1,32 @@
+/* Estilos para el título */
+.title {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #1d4ed8; /* Azul profundo */
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #e0e7ff; /* Fondo azul claro */
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el párrafo */
+.subtext {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    padding: 15px;
+    background-color: #f3f4f6;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+/* Estilos para el texto destacado dentro de subtext */
+.subtext .label {
+    font-weight: bold;
+    color: #6b7280;
+}

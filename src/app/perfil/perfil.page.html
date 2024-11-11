@@ -1,0 +1,60 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+  <ion-buttons slot="start">
+  <ion-menu-button></ion-menu-button>
+  </ion-buttons>
+  <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+  </ion-header>
+  <ion-menu side="start" content-id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menú</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-item *ngIf="user">
+        <ion-avatar slot="start">
+          <img src="https://via.placeholder.com/150" alt="Avatar">
+        </ion-avatar>
+        <ion-label>
+          <h2>{{ user.nombre_usuario }}</h2>
+          <p>{{ user.nombres }} {{ user.apellidos }}</p>
+        </ion-label>
+      </ion-item>
+    </ion-content>
+  </ion-menu>
+  
+
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Mi Perfil</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="logout()">Cerrar Sesión</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content *ngIf="user">
+    <ion-list>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="https://i.pinimg.com/236x/2f/97/f0/2f97f05b32547f54ef1bdf99cd207c90.jpg" alt="Avatar"> <!-- Imagen de perfil, puedes cambiarla -->
+        </ion-avatar>
+        <ion-label>
+          <h2 class="profile-name">{{ user.nombre_usuario }}</h2>
+          <p class="profile-detail">{{ user.nombres }} {{ user.apellidos }}</p>
+          <p class="profile-detail">RUC: {{ user.ruc_dni }}</p>
+          <p class="profile-detail">Email: {{ user.email }}</p>
+        </ion-label>
+        
+        
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  
+  <ion-content *ngIf="!user">
+    <p>No has iniciado sesión.</p>
+  </ion-content>
+  

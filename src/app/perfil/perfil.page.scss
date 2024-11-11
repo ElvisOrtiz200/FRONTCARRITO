@@ -1,0 +1,63 @@
+/* Perfil Page Styles */
+ion-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil en la imagen */
+  }
+  
+  ion-item.profile-item {
+    border-radius: 15px; /* Bordes redondeados */
+    margin: 10px 0;
+    background-color: #f9f9f9; /* Fondo claro */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  }
+  
+  .profile-name {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .profile-detail {
+    font-size: 1.1em;
+    color: #555;
+  }
+  
+  ion-label {
+    margin-left: 10px; /* Separación entre avatar y texto */
+  }
+  
+  ion-button {
+    background-color: #ff4d4d; /* Rojo para el botón de logout */
+    color: white;
+    border-radius: 8px;
+    padding: 5px 15px;
+  }
+  
+  ion-button:hover {
+    background-color: #ff1a1a; /* Cambio de color al hacer hover */
+  }
+  
+  /* Ajuste de espaciado en el contenido */
+  ion-content {
+    padding: 15px;
+  }
+  
+  /* Estilo de la lista de menú */
+  ion-menu {
+    width: 250px;
+    box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  ion-item {
+    --background: #fff; /* Fondo blanco en los items */
+  }
+  
+  h2 {
+    margin: 0;
+    font-size: 1.6em;
+    color: #333;
+  }
+  

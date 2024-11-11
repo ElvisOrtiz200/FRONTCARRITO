@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Editar Producto</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrarModal()">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="registrarForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">Ruc</ion-label>
+      <ion-input formControlName="ruc_dni"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">nombres</ion-label>
+      <ion-input type="text" formControlName="nombres"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">email</ion-label>
+      <ion-input type="text" formControlName="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">direccion</ion-label>
+      <ion-input type="text" formControlName="direccion"></ion-input>
+    </ion-item>
+    <ion-button expand="full"  type="submit">Actualizar</ion-button>
+  </form>
+</ion-content>

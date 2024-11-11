@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Mis Compras</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let compra of compras">
+      <ion-label>
+        <h2>Compra #{{ compra.id_compra_cliente }}</h2>
+        <p>Fecha: {{ compra.fecha }}</p>
+        <p>Total: S/. {{ compra.preciototal }}</p>
+        <ion-button (click)="toggleDetalle(compra.id_compra_cliente)" expand="full" color="primary">
+          {{ compraSeleccionada === compra.id_compra_cliente ? 'Ocultar Detalle' : 'Ver Detalle' }}
+        </ion-button>
+
+        <!-- Mostrar detalles si esta compra está seleccionada -->
+        <div *ngIf="compraSeleccionada === compra.id_compra_cliente">
+          <ion-list>
+            <ion-item *ngFor="let detalle of compra.detalles_compra">
+              <ion-label>
+                <h3>Producto: {{ detalle.producto.descripcion }}</h3>
+                <p>Cantidad: {{ detalle.cantidad }}</p>
+                <p>Precio: S/. {{ detalle.precio }}</p>
+              </ion-label>
+              <ion-thumbnail slot="end">
+                <img src="http://127.0.0.1:8000/{{detalle.producto.foto}}" alt="Imagen de {{ detalle.producto.descripcion }}" />
+              </ion-thumbnail>
+            </ion-item>
+          </ion-list>
+        </div>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

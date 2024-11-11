@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registrar Usuario</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Nombre de Usuario</ion-label>
+    <ion-input [(ngModel)]="nombre_usuario" type="text" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Contraseña</ion-label>
+    <ion-input [(ngModel)]="contra" type="password" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Seleccionar Cliente</ion-label>
+    <ion-select [(ngModel)]="cliente_id">
+      <ion-select-option *ngFor="let cliente of clientes" [value]="cliente.cliente_id">
+        {{ cliente.nombres }} {{ cliente.apellidos }}
+      </ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-button expand="full" (click)="register()">Registrar</ion-button>
+</ion-content>

@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Carrito de productos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">carrito</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>Código</ion-col>
+      <ion-col>Descripción</ion-col>
+      <ion-col>Precio</ion-col>
+      <ion-col>Cantidad</ion-col>
+      <ion-col>Subtotal</ion-col>
+      <ion-col>Eliminar</ion-col>
+    </ion-row>
+
+    <ion-row *ngFor="let item of listaItemsCarrito; let i=index">
+      <ion-col>{{ item.idproducto }}</ion-col>
+      <ion-col>{{ item.descripcion }}</ion-col>
+      <ion-col>S/. {{ item.precio }}</ion-col>
+      <ion-col>{{ item.cantidad }}</ion-col>
+      <ion-col>S/. {{ item.cantidad! * item.precio! }}</ion-col>
+      <ion-col>
+        <button class="btn" (click)="eliminarProductoCarrito(i)">Eliminar</button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col colspan="3"></ion-col>
+      <ion-col>Total</ion-col>
+      <ion-col>S/. {{ total }}</ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-button expand="full" color="danger" (click)="VaciarCarrito()">Vaciar Carrito</ion-button>
+  <ion-button expand="full" color="success" (click)="comprar()">Comprar</ion-button>
+</ion-content>
